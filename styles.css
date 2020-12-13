@@ -3,6 +3,7 @@
   margin: 0;
   padding: 0;
 }
+
 /* variables */
 :root {
   --theme-color: #414059;
@@ -11,35 +12,50 @@
   --background-color: #f2f2f2;
   --link-color: white;
 }
+html,
+body {
+  overflow-x: hidden;
+}
 body {
   font-family: Helvetica, Arial, sans-serif;
   font-size: 16px;
   line-height: 1.5em;
-  overflow-x: hidden;
 }
 nav {
-  background-color: var(--theme-color);
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  background-color: #414059;
+  padding: 16px;
+  position: fixed;
+  width: 100%;
+}
+nav ul {
+  width: 100%;
+  display: flex;
   justify-content: center;
+  list-style-type: none;
 }
 nav a {
-  font-size: 17px;
-  color: var(--link-color);
+  color: white;
+  font-size: 1em;
+  padding: 16px 24px;
   text-decoration: none;
-  padding: 16px 20px;
 }
 nav a:hover {
   background-color: orange;
 }
+
 .container {
   max-width: 992px;
   margin: 0 auto;
   padding: 20px;
 }
+.svg-image {
+  padding-top: 50px;
+}
 .svg-image svg {
   max-width: 100%;
   height: auto;
+  padding: 20px;
+  margin-bottom: 10px;
 }
 
 img {
@@ -125,14 +141,64 @@ footer {
   color: #ffffff;
   width: 100%;
 }
+/* animations */
+#man {
+  animation: move 3s ease-in 0s;
+}
+@keyframes move {
+  from {
+    transform: translateY(-600px);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+#screen path,
+#html_icon path,
+#css_icon path {
+  animation: blink 5s 5 ease 3s;
+}
+@keyframes blink {
+  0% {
+    fill: #414059;
+  }
+  50% {
+    fill: orange;
+  }
+  75% {
+    fill: pink;
+  }
+  100% {
+    fill: green;
+  }
+}
+
+#coat path,
+#icon1 path,
+#icon2 path,
+#icon3 path {
+  animation: coat 5s 3 ease 3s;
+}
+@keyframes coat {
+  0% {
+    fill: #414059;
+  }
+  50% {
+    fill: yellow;
+  }
+  75% {
+    fill: purple;
+  }
+  100% {
+    fill: indigo;
+  }
+}
 
 @media screen and (max-width: 768px) {
-  nav {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    justify-content: center;
+  .nav ul li {
+    display: inline-block;
+    padding: 12px 18px;
   }
-
   .intro {
     display: grid;
     grid-template-columns: 1fr;
