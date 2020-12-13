@@ -1,0 +1,177 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+/* variables */
+:root {
+  --theme-color: #414059;
+  --button-color: #5f5bd9;
+  --header-color: #5a618c;
+  --background-color: #f2f2f2;
+  --link-color: white;
+}
+body {
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.5em;
+  overflow-x: hidden;
+}
+nav {
+  background-color: var(--theme-color);
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+}
+nav a {
+  font-size: 17px;
+  color: var(--link-color);
+  text-decoration: none;
+  padding: 12px 20px;
+  justify-self: center;
+}
+nav a:hover {
+  background-color: orange;
+}
+.container {
+  max-width: 992px;
+  margin: 0 auto;
+  padding: 20px;
+}
+.svg-image svg {
+  max-width: 100%;
+  height: auto;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+.intro {
+  display: grid;
+  grid-template-columns: 3fr 2fr;
+  grid-column-gap: 50px;
+}
+
+.definition h1 {
+  font-size: 3em;
+  margin-bottom: 10px;
+}
+.definition p {
+  font-size: 1.5em;
+  padding-top: 10px;
+  text-align: justify;
+}
+.people-say {
+  background-color: var(--background-color);
+  padding: 20px;
+  justify-self: end;
+}
+.people-say p {
+  font-size: 1.3em;
+  font-style: italic;
+  padding: 20px;
+}
+.frameworks h2,
+h3 {
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+h1,
+h2 {
+  color: var(--header-color);
+}
+
+.frameworks p {
+  font-size: 1.2em;
+}
+.contact {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+.contact h3 {
+  text-align: center;
+}
+.contact-me {
+  padding-top: 20px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+input[type="email"] {
+  outline: none;
+  width: 70%;
+  font-size: 1.2em;
+  padding: 10px;
+}
+textarea {
+  outline: none;
+  width: 70%;
+  resize: none;
+  font-size: 1.2em;
+  padding: 12px;
+}
+button {
+  font-size: 1em;
+  padding: 12px 18px;
+  background-color: var(--button-color);
+  color: white;
+  border: none;
+  outline: none;
+}
+footer {
+  text-align: center;
+  padding: 17px;
+  background-color: var(--theme-color);
+  color: #ffffff;
+  width: 100%;
+}
+
+@media screen and (max-width: 768px) {
+  nav {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    justify-content: center;
+  }
+
+  .intro {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-row-gap: 10px;
+  }
+
+  .definition h1 {
+    font-size: 1.8em;
+  }
+  .definition p {
+    font-size: 1.2em;
+  }
+  .people-say p {
+    font-size: 1.1em;
+  }
+  .frameworks p {
+    font-size: 1em;
+  }
+  .contact-me {
+    padding-top: 20px;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-row-gap: 10px;
+  }
+
+  input[type="email"] {
+    outline: none;
+    width: 90%;
+    font-size: 1em;
+    padding: 10px;
+  }
+  textarea {
+    outline: none;
+    width: 90%;
+    resize: none;
+    font-size: 1em;
+    padding: 10px;
+  }
+}
